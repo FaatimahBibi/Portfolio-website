@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #001f3f, #8fdcc6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* this fixes the footer */
+}
+
+/* ✅ Navbar */
+.nav-container {
+  width: 100%;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.name h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+/* ✅ Menu icons */
+.menu-btn {
+  font-size: 35px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 25px;
+  top: 22px;
+}
+
+/* default hide close */
+#close {
+  display: none;
+}
+
+
+/* ✅ show dropdown on hover (no JS) */
+nav:hover .dropdown-menu {
+  display: block;
+  right: 25px;
+}
+
+nav:hover #menu {
+  display: none;
+
+}
+
+nav:hover #close {
+  display: inline-block;
+}
+
+/* ✅ Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 70px;
+  background: rgba(18, 89, 91, 0.85);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 170px;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu a {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #ffffff40;
+  text-decoration: none;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* ✅ Center navbar links between name & menu icon */
+.menu {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu a {
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.menu a:hover {
+  color: #ffe58a;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  padding: 30px 20px;
+  text-align: center;
+   font-size: 2.2rem;
+   color: #ffe58a;
+}
+
+main > div {
+  background-color: rgb(142, 222, 225);
+  width: 65%;
+  margin: 0 auto;
+  color: #0c4760;
+  line-height: 2;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 10 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+/* Footer Style */
+footer {
+  background-color: #dbe4ea;
+  color: #0d0d0d;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+}
